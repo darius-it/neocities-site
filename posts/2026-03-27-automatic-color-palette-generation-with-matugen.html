@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>color palette generation with matugen</title>
+    <link rel="icon" href="../images/favicon.png" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"> 
+    <link href="../style/style.css" rel="stylesheet" type="text/css" media="all">    
+  </head>
+  <body>
+    <div id="container">
+    <div id="header">...</div>
+    <div id="content">
+      <h1 id="postTitleH1"></h1>
+      <h4 id="postDate"></h4>
+      
+      <p>When browsing forums related to Linux ricing, there is always one common denominator: a color palette which perfectly matches the background image.</p>
+      
+      <img src="https://preview.redd.it/hyprland-finally-switched-to-matugen-v0-uz0v23ehf1jg1.jpg?width=1080&crop=smart&auto=webp&s=023aae9c598dd11a0e458a293355f8e2f0b733a7" alt="A screenshot depicting a Linux dekstop rice">
+      
+      <a href="https://www.reddit.com/r/unixporn/comments/1r2plzm/hyprland_finally_switched_to_matugen/">Image Source</a>
+      
+      <p>Traditionally, the tool to achieve this was <a href="https://github.com/dylanaraps/pywal">pywal</a>, but it is now discontinued and replaced by several alternatives such as <a href="https://codeberg.org/explosion-mental/wallust">Wallust</a> or <a href="https://github.com/InioX/matugen">Matugen</a>. Personally I use Matugen because I prefer its outputs over other tools.</p>
+      
+      <h2>Basics of color palette generation</h2>
+      
+      <p>All color palette tools work similarly: your background image (or set of colors/a static color) is your input, and as an output you receive a color palette which can be used for various programs. This is usually paired with templates for each software, where placeholders get replaced by the colors of your generated palette.</p>
+      
+      <p>For matugen, this can be done using following command:</p>
+      
+      <pre><code>
+      matugen image /path/to/img
+      </code></pre>
+      
+      <p>Assuming you have templates set up in your config, this should output them to their respective paths. While this works, the main caveat is that every time you switch your wallpaper, you have to run this command again.</p>
+      
+      <p>One integration which I found particularly nice was the template for the application launcher I use, <a href="https://github.com/vicinaehq/vicinae">Vicinae</a>. It has a whole <a href="https://docs.vicinae.com/theming/matugen">section in the docs</a> explaining how to integrate Matugen, which is quite nice.</p>
+      
+      <h2>Automating color generation</h2>
+      
+      <p>So the next step in your perfect color-matched setup is automating the process, i.e. switching your wallpaper automatically updates your generated color palette for all apps.</p>
+      
+      <p>In my case, I am using <a href="https://github.com/anufrievroman/waypaper">Waypaper</a> to switch wallpapers in combination with <a href="https://codeberg.org/LGFae/awww">awww</a> as my wallpaper daemon.</p>
+      
+      <p>To execute something after changing the wallpaper in Waypaper, you can add a command to the <code>post_command</code> option in the <code>config.ini</code>:</p>
+      
+      <pre><code>
+      matugen image $(awww query | sed 's/.*image: //')  \
+        -m dark --source-color-index 0
+      </code></pre>
+      
+      <p>Because this command is composed of quite a few pieces, lets dissect it:</p>
+      
+      <ul>
+        <li>As explained above, matugen image generates the color palette</li>
+        <li>The next part is a nested call to awww, my wallpaper daemon. The query command returns some info about the currently set wallpaper, and using sed I filter just for the file path, which we can then pass to matugen.</li>
+        <li> Lastly, we specify that we want a dark color scheme and pick the most dominant color (index 0) from our image for generating the color palette.</li>
+      </ul>
+      
+      <p>And that's it! Now when switching the background image in Waypaper, all programs that have templates configured automatically update their colors. In some cases, they don't have hot reload so you have to restart them (but there are workarounds for certain applications).</p>
+      
+    <div id="nextprev"></div>
+    <script src="https://giscus.app/client.js"
+        data-repo="darius-it/website-comments"
+        data-repo-id="R_kgDORyuKgA"
+        data-category="Website Comments"
+        data-category-id="DIC_kwDORyuKgM4C5bTY"
+        data-mapping="title"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="transparent_dark"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+    </script>
+    </div> <!-- end of div id="content" -->
+    <div id="footer"></div>
+    </div> <!-- end of div id="container" -->
+  <!-- Here's the link to our JavaScript! -->
+  <script src="../script.js"></script>
+  </body>
+</html>

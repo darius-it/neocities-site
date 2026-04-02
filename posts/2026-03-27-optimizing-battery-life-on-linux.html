@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>optimizing battery life on linux</title> <!-- If you leave title as "Blog Post", it will automatically be updated to the post title -->
+    <link rel="icon" href="../images/favicon.png" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"> 
+    <link href="../style/style.css" rel="stylesheet" type="text/css" media="all">    
+  </head>
+  <body>
+    <div id="container">
+    <div id="header">...</div>
+    <div id="content">
+      <h1 id="postTitleH1"></h1>
+      <h4 id="postDate"></h4>
+      
+      <p>For university, I usually switch between an Apple Silicon MacBook and a ThinkPad T480s (it runs Arch, btw). The MacBook is my usual choice for long days, because its battery life is just unbeatable (~6-8 hours depending on the type of usage). Unfortunately, even for short days with 1-2 lectures, my beloved ThinkPad was struggling to get through them, only lasting at most 3 hours.</p>
+      
+      <p>Because I want to use my ThinkPad more, especially since I daily-drive a similar setup (Niri + Quickshell) on my Desktop and the keybinds are part of my muscle memory now, I tried to look into optimizing the battery life.</p>
+      
+      <h2>Tools to optimize battery life on Linux</h2>
+      
+      <p>To research the available tools, I used two primary sources: Reddit and the Arch Wiki. Both gave me various options on how to optimize battery life, which I was able to narrow down to a few options to consider:</p>
+      
+      <ul>
+        <li>To examine your battery usage and run some basic optimizations, you can use <a href="">Powertop</a></li>
+        <li>A tool which easily allows various tweaks regarding power profiles, limiting battery charge and much more is <a href="https://wiki.archlinux.org/title/TLP">TLP</a>. It implements Powertop suggestions as its default, so Powertop will only be useful if you want to make further manual tweaks.
+        <li>For ThinkPads specifically, there is <a href="">throttled</a>, which allows you to apply more advanced tweaks such as undervolting to prevent thermal throttling.</li>
+      </ul>
+      
+      While browsing Reddit, I have also found <a href="https://amanusk.medium.com/an-extensive-guide-to-optimizing-a-linux-laptop-for-battery-life-and-performance-27a7d853856c">a Medium article</a> outlining some more advanced techniques to tweak your battery life (and it also includes some explanations of TLP settings).
+      
+      <h2>My choices</h2>
+      
+      <p>I wanted to keep it very simple, so I just went with TLP and TLP-UI to quickly make tweaks. These are the main settings that will hopefully help with my battery life:</p>
+      
+      <ul>
+        <li>Set power saving profile as default</li>
+        <li>Disable WOL (Wake on LAN). This is a default setting, but needs the <code>ethtool</code> package to be installed on Arch.</li>
+        <li>Set CPU scaling governor to power save</li>
+        <li>Set the maximum CPU performance to 75% on battery</li>
+        <li>Disabled "turbo boost" and dynamic boost on battery</li>
+        <li>For battery health purposes, limit battery charge to 80%</li>
+      </ul>
+      
+      Other than that, I just went with the defaults of TLP since they already seem to be configured quite well.
+      
+      <h2>Further things to try</h2>
+      
+      <p>I am hoping that this setup will help with my battery life and allow me to use my ThinkPad more often at uni. If it still doesn't help enough, I have two things I want to try to further improve battery life and CPU throttling.</p>
+      
+      <p>Firstly, I would attempt to use throttled to undervolt the CPU. I didn't go for it yet because it seemed a bit more risky and it needs a bit of tweaking to adjust parameters for a stable config.</p>
+      
+      <p>Secondly, since the ThinkPad is a bit old, repasting the CPU or swapping the fan/heatsink might help a bit with overheating and very loud fan noises which I've been encountering in some cases. This is not related directly to battery life but would also improve my experience significantly.</p>
+      
+      
+    <div id="nextprev"></div>
+    <script src="https://giscus.app/client.js"
+        data-repo="darius-it/website-comments"
+        data-repo-id="R_kgDORyuKgA"
+        data-category="Website Comments"
+        data-category-id="DIC_kwDORyuKgM4C5bTY"
+        data-mapping="title"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="transparent_dark"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+    </script>
+    
+    </div> <!-- end of div id="content" -->
+    <div id="footer"></div>
+    
+    </div> <!-- end of div id="container" -->
+  <!-- Here's the link to our JavaScript! -->
+  <script src="../script.js"></script>
+  </body>
+</html>
