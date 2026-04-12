@@ -11,3 +11,6 @@ Small Neocities site where I post notes about various topics.
 - KotlinConf experience (after I've attended)
 - Notes about Elk as primary Mastodon client, maybe something about self-hosting in general
 - My experience with IRC (using The Lounge, #lobsters channel, ...)
+- Notetaking/flashcards setup for uni (previously RemNote, now trying Obsidian)
+- Think about a way to post current jams
+- Post about self-hosted music stuff, Subsonic, Maloja, etc.
