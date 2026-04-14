@@ -7,7 +7,7 @@ Small Neocities site where I post notes about various topics.
 
 ## Things to write about
 - Deploying to Neocities using GitHub Actions
-- Simple GitHub setup for managing multiple identities, work/personal/etc. (so I can reference this for setting up new machines)
+- Simple GitHub setup for managing multiple identities, work/personal/etc. (so I can reference this for setting up new machines); done, needs to be moved over from Obsidian
 - KotlinConf experience (after I've attended)
 - Notes about Elk as primary Mastodon client, maybe something about self-hosting in general
 - My experience with IRC (using The Lounge, #lobsters channel, ...)
