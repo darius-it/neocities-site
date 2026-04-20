@@ -82,7 +82,8 @@ Host codeberg.org
         <p>If you have multiple accounts on GitHub (same <code>HostName</code>), make sure to give unique names for the <code>Host</code> (e.g. <code>github.com-work</code>).</p>
         <p>When cloning repos, make sure to then use SSH and specify the different host (so instead of just <code>github.com</code>, you need to use <code>github.com-personal</code> when cloning).</p>
         
-        <p>Since this can be quite of a hassle sometimes, I have created a zsh function and added it to my <code>.zshrc</code>:</p>
+        <h2>Better cloning for same host</h2>
+        <p>Since the above mentioned unique hostname can be quite of a hassle sometimes, I have created a zsh function and added it to my <code>.zshrc</code>:</p>
         <pre><code class="language-zsh">pclone() {
     git clone git@github.com-personal:"$@".git
 }</code></pre>
