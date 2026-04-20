@@ -23,10 +23,11 @@ let postsArray = [
 //[ "posts/2020-11-10-My-Third-Post-Example.html" ],
 //[ "posts/2020-11-10-My-Second-Post-Example.html" ],
 // [ "posts/2020-11-10-Post-Template.html" ],
+["posts/2026-04-20-managing-multiple-git-identities.html"],
 ["posts/2026-04-02-turning-my-phone-into-a-brick.html"],
 ["posts/2026-03-27-automatic-color-palette-generation-with-matugen.html"],
 ["posts/2026-03-27-optimizing-battery-life-on-linux.html"],
-["posts/2026-03-26-new-site.html"] ];
+["posts/2026-03-26-new-site.html"]];
 
 //XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 

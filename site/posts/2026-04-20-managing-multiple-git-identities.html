@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog Post</title> <!-- If you leave title as "Blog Post", it will automatically be updated to the post title -->
+    <link rel="icon" href="../images/favicon.png" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"> 
+    <link href="../style/style.css" rel="stylesheet" type="text/css" media="all">    
+  </head>
+  <body>
+    <div id="container">
+    <div id="header">...</div>
+    <div id="content">
+      <h1 id="postTitleH1"></h1>
+      <h4 id="postDate"></h4>
+
+        <p>If like myself, you find yourself using different accounts across multiple platforms (GitHub for work/personal, Codeberg, etc.), you need to manage multiple Git identities on one machine.</p>
+
+        <p>Here I documented my setup, mostly to have a quick reference I can pull up to share with friends or if I need to set up another machine.</p>
+
+        <h2 id="setup">Setup</h2>
+        <p>General setup: main <code>.gitconfig</code> is just includes based on different folders:</p>
+        <pre><code class="language-ini">[includeIf "gitdir:~/Projects/work/"]
+    path = "~/Projects/work/.gitconfig-work"
+[includeIf "gitdir:~/Projects/personal/"]
+    path = "~/Projects/work/.gitconfig-personal"</code></pre>
+    
+        <p>Inside each gitconfig, I define basic identity stuff and a few defaults:</p>
+
+        <pre><code class="language-ini">[user]
+    email = &lt;REDACTED&gt;
+    name = Darius
+    signingkey = &lt;REDACTED&gt; # GPG signing key id
+[push]
+    default = current
+[alias]
+    tree = log --graph --pretty=oneline --abbrev-commit
+[core]
+    editor = code
+    sshCommand = "ssh -i ~/.ssh/dit-gh/some_ssh_key"
+[commit]
+    gpgsign = true
+[init]
+    defaultBranch = main</code></pre>
+
+        <h2 id="extra-adding-a-gpg-key-using-it-on-github-gitlab">Extra: Adding a GPG key &amp; using it on GitHub/GitLab</h2>
+
+        <p>To generate a new GPG key:</p>
+        <pre><code class="language-bash">gpg --full-generate-key</code></pre>
+
+        <p>Fill out all the info, add a password and it's ready to export and use for signing commits. Make sure the email matches one of the verified emails on your GitHub/GitLab/etc. account if you want to have verified commits on that site.</p>
+        
+        <p>To export the key, first grab the long form of the GPG key id:</p>
+        <pre><code class="language-bash">gpg --list-secret-keys --keyid-format=long</code></pre>
+        
+        <p>For the relevant key, it should be the string that comes after <code>ed25519/...</code> or <code>4096R/...</code> etc.</p>
+        
+        <p>Then you can use the ID to export the public key:</p>
+        <pre><code class="language-bash">gpg --armor --export SOMEGPGKEYID</code></pre>
+        
+        <p>The output can be pasted somewhere in your account settings, and you're ready to go.</p>
+
+        <h2 id="extra-managing-ssh-keys">Extra: Managing SSH keys</h2>
+        <p>To manage SSH keys, you can define multiple hosts in your <code>.ssh/config</code> file:</p>
+        <pre><code class="language-sshconfig"># work account
+Host github.com-work
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/work-gh/id_ed25519
+
+# personal account
+Host github.com-personal
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/personal-gh/id_ed25519
+
+Host codeberg.org
+    HostName codeberg.org
+    User git
+    IdentityFile ~/.ssh/codeberg_key</code></pre>
+
+        <p>If you have multiple accounts on GitHub (same <code>HostName</code>), make sure to give unique names for the <code>Host</code> (e.g. <code>github.com-work</code>).</p>
+        <p>When cloning repos, make sure to then use SSH and specify the different host (so instead of just <code>github.com</code>, you need to use <code>github.com-personal</code> when cloning).</p>
+        
+        <p>Since this can be quite of a hassle sometimes, I have created a zsh function and added it to my <code>.zshrc</code>:</p>
+        <pre><code class="language-zsh">pclone() {
+    git clone git@github.com-personal:"$@".git
+}</code></pre>
+        
+        <p>Like that, I can just use <code>pclone username/somerepo.git</code> and know for sure that the correct SSH key will be used.</p>
+      
+    <div id="nextprev"></div>
+    <script src="https://giscus.app/client.js"
+        data-repo="darius-it/website-comments"
+        data-repo-id="R_kgDORyuKgA"
+        data-category="Website Comments"
+        data-category-id="DIC_kwDORyuKgM4C5bTY"
+        data-mapping="title"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="transparent_dark"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+    </script>
+    </div> <!-- end of div id="content" -->
+    <div id="footer"></div>
+    </div> <!-- end of div id="container" -->
+  <!-- Here's the link to our JavaScript! -->
+  <script src="../script.js"></script>
+  </body>
+</html>
