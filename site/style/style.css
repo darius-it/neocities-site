@@ -157,4 +157,5 @@ hr {
   justify-content: center;
   padding-bottom: 1em;
   margin-top: -1em;
+  gap: 8px;
 }
