@@ -1,0 +1,39 @@
+{
+	"$schema": "https://makko.starlightnet.work/schema.json",
+	"title": "darius' notes",
+	"description": "Random notes about various technical and non-technical topics.",
+	"url": "https://n.darius-it.me",
+	"paths": {
+		"symlinks_enabled": false,
+		"cleanup_mode": "none",
+		"source": "notes/",
+		"templates": "templates/",
+		"output": "web/"
+	},
+	"feeds": {
+		"html": "index.html",
+		"atom": "feed.atom",
+		"rss": "feed.rss",
+		"json": "feed.json"
+	},
+	"custom": {
+		"song_of_the_day": {
+			"album_art_url": "https://resources.tidal.com/images/fd5857e9/4b41/498b/bc8f/3aa9d4742c03/1280x1280.jpg",
+			"song_url": "https://tidal.com/track/276059876",
+			"song_title": "Simon Dominic",
+			"song_artist": "Simon Dominic"
+		}
+	},
+	"callbacks": {
+		"on_change": null,
+		"on_create": null,
+		"on_delete": null,
+		"on_modify": null
+	},
+	"hashes": {
+		"lGHrHQz_7Fk": "aAUtXZdaIVc",
+		"0dSzwLyxXxg": "PcG2Lpsv8b4",
+		"6TfytgS4alM": "kKwW7s09RG4",
+		"X1tG4eLPTQw": "TeFuvhiezuA"
+	}
+}

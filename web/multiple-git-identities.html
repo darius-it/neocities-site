@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>darius&#39; notes</title>
+
+        <link rel="stylesheet" href="/post.css" />
+    </head>
+    <body>
+        <a href="/">darius&#39; notes</a>
+
+        <section>
+            <h1>managing multiple git identities</h1>
+            
+            <div class="centered-row">
+                <p style="opacity: 60%">dealing with multiple identities for work/personal accounts</p>
+                <p style="opacity: 70%; font-size: 14px;">
+                    20/04/2026
+                </p>
+            </div>
+        </section>
+
+        <section class="post-body"><p>If like myself, you find yourself using different accounts across multiple platforms (GitHub for work/personal, Codeberg, etc.), you need to manage multiple Git identities on one machine.</p>
+<p>Here I documented my setup, mostly to have a quick reference I can pull up to share with friends or if I need to set up another machine.</p>
+<h2 id="setup">Setup</h2>
+<p>General setup: main <code>.gitconfig</code> is just includes based on different folders:</p>
+<pre><code class="language-ini" lang="ini">[includeIf &quot;gitdir:~/Projects/work/&quot;]
+    path = &quot;~/Projects/work/.gitconfig-work&quot;
+[includeIf &quot;gitdir:~/Projects/personal/&quot;]
+    path = &quot;~/Projects/work/.gitconfig-personal&quot;
+</code></pre>
+<p>Inside each gitconfig, I define basic identity stuff and a few defaults:</p>
+<pre><code class="language-ini" lang="ini">[user]
+    email = &lt;REDACTED&gt;
+    name = Darius
+    signingkey = &lt;REDACTED&gt; # GPG signing key id
+[push]
+    default = current
+[alias]
+    tree = log --graph --pretty=oneline --abbrev-commit
+[core]
+    editor = code
+    sshCommand = &quot;ssh -i ~/.ssh/dit-gh/some_ssh_key&quot;
+[commit]
+    gpgsign = true
+[init]
+    defaultBranch = main
+</code></pre>
+<h2 id="extra-adding-a-gpg-key-using-it-on-github-gitlab">Extra: Adding a GPG key &amp; using it on GitHub/GitLab</h2>
+<p>To generate a new GPG key:</p>
+<pre><code class="language-bash" lang="bash">gpg --full-generate-key
+</code></pre>
+<p>Fill out all the info, add a password and it's ready to export and use for signing commits. Make sure the email matches one of the verified emails on your GitHub/GitLab/etc. account if you want to have verified commits on that site.</p>
+<p>To export the key, first grab the long form of the GPG key id:</p>
+<pre><code class="language-bash" lang="bash">gpg --list-secret-keys --keyid-format=long
+</code></pre>
+<p>For the relevant key, it should be the string that comes after <code>ed25519/...</code> or <code>4096R/...</code> etc.</p>
+<p>Then you can use the ID to export the public key:</p>
+<pre><code class="language-bash" lang="bash">gpg --armor --export SOMEGPGKEYID
+</code></pre>
+<p>The output can be pasted somewhere in your account settings, and you're ready to go.</p>
+<h2 id="extra-managing-ssh-keys">Extra: Managing SSH keys</h2>
+<p>To manage SSH keys, you can define multiple hosts in your <code>.ssh/config</code> file:</p>
+<pre><code class="language-sshconfig" lang="sshconfig"># work account
+Host github.com-work
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/work-gh/id_ed25519
+
+# personal account
+Host github.com-personal
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/personal-gh/id_ed25519
+
+Host codeberg.org
+    HostName codeberg.org
+    User git
+    IdentityFile ~/.ssh/codeberg_key
+</code></pre>
+<p>If you have multiple accounts on GitHub (same <code>HostName</code>), make sure to give unique names for the <code>Host</code> (e.g. <code>github.com-work</code>).</p>
+<p>When cloning repos, make sure to then use SSH and specify the different host (so instead of just <code>github.com</code>, you need to use <code>github.com-personal</code> when cloning).</p>
+<h2 id="better-cloning-for-same-host">Better cloning for same host</h2>
+<p>Since the above mentioned unique hostname can be quite of a hassle sometimes, I have created a zsh function and added it to my <code>.zshrc</code>:</p>
+<pre><code class="language-zsh" lang="zsh">pclone() {
+    git clone git@github.com-personal:&quot;$@&quot;.git
+}
+</code></pre>
+<p>Like that, I can just use <code>pclone username/somerepo.git</code> and know for sure that the correct SSH key will be used.</p>
+<p>Another option would be to include a custom SSH command in your config, see <a href="https://lobste.rs/s/ggqd2g/how_i_configure_my_git_identities#c_rchsxp">this comment on lobsters</a> for more info.</p>
+</section>
+
+        <hr />
+
+        <!-- TODO: add giscus here -->
+    </body>
+</html>

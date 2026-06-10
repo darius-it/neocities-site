@@ -1,0 +1,41 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "darius' notes",
+  "home_page_url": "https://n.darius-it.me",
+  "description": "Random notes about various technical and non-technical topics.",
+  "authors": [],
+  "items": [
+    {
+      "id": "https://n.darius-it.me/new-site.html",
+      "url": "https://n.darius-it.me/new-site.html",
+      "title": "new site (once again)",
+      "summary": "it's time for yet another website redesign!",
+      "date_published": "2026-06-09T21:20:06+00:00",
+      "authors": [{"name": "Darius"}]
+    },
+    {
+      "id": "https://n.darius-it.me/linux-battery-life.html",
+      "url": "https://n.darius-it.me/linux-battery-life.html",
+      "title": "optimizing battery life on linux",
+      "summary": "Trying to squeeze as many hours as I can out of my poor ThinkPad",
+      "date_published": "2026-05-20T10:52:18+00:00",
+      "authors": [{"name": "Darius"}]
+    },
+    {
+      "id": "https://n.darius-it.me/multiple-git-identities.html",
+      "url": "https://n.darius-it.me/multiple-git-identities.html",
+      "title": "managing multiple git identities",
+      "summary": "dealing with multiple identities for work/personal accounts",
+      "date_published": "2026-04-20T11:29:01+00:00",
+      "authors": [{"name": "Darius"}]
+    },
+    {
+      "id": "https://n.darius-it.me/matugen-palette-generation.html",
+      "url": "https://n.darius-it.me/matugen-palette-generation.html",
+      "title": "generating color palettes with matugen",
+      "summary": "Automatically generating color palettes from wallpapers using matugen + awww",
+      "date_published": "2026-03-27T11:31:30+00:00",
+      "authors": [{"name": "Darius"}]
+    }
+  ]
+}

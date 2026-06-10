@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>darius&#39; notes</title>
+
+        <link rel="stylesheet" href="/styles.css" />
+        <script type="module">
+            const pattern = '⠂⠁⠈⠂⠄⠄⠂⠁⠁⠂⠄⠄⠂⠁⠁⠂';
+
+            function fillHr(el) {
+                const containerW = el.offsetWidth;
+                const temp = document.createElement('span');
+
+                temp.style.cssText = 'position:absolute;visibility:hidden;white-space:nowrap;font-size:14px;';
+                temp.textContent = pattern;
+                document.body.appendChild(temp);
+
+                const patternW = temp.offsetWidth;
+                document.body.removeChild(temp);
+                
+                el.textContent = pattern.repeat(Math.ceil(containerW / patternW) + 1);
+            }
+
+            fillHr(document.getElementById('myHr'));
+        </script>
+    </head>
+    <body>
+        <div class="panel-wrapper">
+            <div class="left-sidebar">
+                <div class="panel links-left-panel">
+                    <span class="sidebar-header">Links ➤</span>
+                    <nav>
+                        <a href="/"><span class="bp">╰</span> <span>Home</span></a>
+                        <a href="#"><span class="bp">╰</span> <span>Bookshelf</span></a>
+                        <a href="#"><span class="bp">╰</span> <span>About</span></a>
+                    </nav>
+                    <div class="dotted-line-box"></div>
+                    <img class="miku-peek" src="images/miku_peek.webp" alt="sideways peeking hatsune miku" />
+                </div>
+                <div class="panel">
+                    <div class="badges-container">
+                        <a href="https://makko.starlightnet.work/"><img alt="made by makko badge" src="images/buttons/madebymakko.webp" /></a>
+                        <a href="https://makko.starlightnet.work/"><img alt="makkosite badge" src="images/buttons/makkosite.webp" /></a> 
+                        <img alt="neocities badge" src="images/buttons/neocities_btn.png" />
+                        <img alt="irc works badge" src="images/buttons/ircworks.gif" />
+                        <img alt="miku approved badge" src="images/buttons/miku_btn.gif" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="center-panel-wrapper">
+                <main class="center-panel">
+                    <h1>Hi, I'm Darius! Welcome to my little corner of the internet <span class="accent-highlight">ヾ(＾∇＾)</span></h1>
+
+                    <p class="intro-text">
+                        I’m a Computer Science student from Germany. I like building  all sorts of websites and apps, primarily using TypeScript and Java/Kotlin. 
+                        At university, I work part-time as a programming tutor, teaching 1st year students Java and general programming concepts.
+                        <br><br>
+                        Outside of programming, I enjoy reading novels (mostly sci-fi), traveling and listening to Korean & Japanese music. If you share any of these interests, feel free to reach out anytime :)
+                    </p>
+
+                    <div class="wavy-hr" id="myHr"></div>
+
+                    <section>
+                        <h2>Recent posts</h2>
+                        <article>
+                            <h3 class="title">
+                                <a href="/new-site.html">new site (once again)</a>
+                            </h3>
+                            <div style="overflow: auto">
+                                <p class="creation-date" style="float: right">
+                                    09/06/2026
+                                </p>
+                            </div>
+                        </article>
+                        <article>
+                            <h3 class="title">
+                                <a href="/linux-battery-life.html">optimizing battery life on linux</a>
+                            </h3>
+                            <div style="overflow: auto">
+                                <p class="creation-date" style="float: right">
+                                    20/05/2026
+                                </p>
+                            </div>
+                        </article>
+                        <article>
+                            <h3 class="title">
+                                <a href="/multiple-git-identities.html">managing multiple git identities</a>
+                            </h3>
+                            <div style="overflow: auto">
+                                <p class="creation-date" style="float: right">
+                                    20/04/2026
+                                </p>
+                            </div>
+                        </article>
+                        <article>
+                            <h3 class="title">
+                                <a href="/matugen-palette-generation.html">generating color palettes with matugen</a>
+                            </h3>
+                            <div style="overflow: auto">
+                                <p class="creation-date" style="float: right">
+                                    27/03/2026
+                                </p>
+                            </div>
+                        </article>
+                    </section>
+                </main>
+            </div>
+
+            <div class="right-sidebar">
+                <div class="panel">
+                    <span class="sidebar-header">Contact me ‧₊˚彡</span>
+                    <p>
+                        I have consciously made the choice to move away from traditional social media, so the only ways to contact me are through Mastodon or IRC.
+                        <br><br>
+                        <span class="accent-highlight">Mastodon:</span><br>
+                        <span class="smaller-text">darius@social.linux.pizza</span>
+                        <br><br>
+                        <span class="accent-highlight">IRC (Libera Chat):</span><br>
+                        <span class="smaller-text">~dit@user/darius-it</span>
+                    </p>
+                </div>
+                <div class="panel daily-song-panel">
+                    <span class="sidebar-header">Tune of the day ₊˚♪</span>
+
+                    <a class="tune" href="https://tidal.com/track/276059876" target="_blank">
+                        <img width="48" src="https://resources.tidal.com/images/fd5857e9/4b41/498b/bc8f/3aa9d4742c03/1280x1280.jpg" alt="cover art" />
+                        <div class="tune-info">
+                            <span class="tune-title">Simon Dominic</span>
+                            <span class="tune-artist">Simon Dominic</span>
+                        </div>
+                    </a>
+
+                    <img class="miku-headphones" src="images/miku_headphones.webp" height="86px" />
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

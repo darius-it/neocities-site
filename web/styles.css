@@ -1,0 +1,340 @@
+:root {
+    color-scheme: dark;
+
+    --panel-color: #121317;
+    --primary-accent: #2b325f;
+    --primary-accent-lighter: #6589ff;
+    --primary-accent-extralight: #8ba6ff;
+    --secondary-accent: #844d9a;
+    --secondary-accent-lighter: #9f5cb9;
+    --secondary-accent-extralight: #de89ff; 
+}
+
+body {
+    height: 100vh;
+
+    background-color: black;
+    background-image: url("images/mikumiku_bg.webp");
+    background-repeat:no-repeat;
+    background-position: center center;
+
+    align-content: center;
+
+    font-family:
+        ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas,
+        "DejaVu Sans Mono", monospace;
+
+    letter-spacing: -2px;
+}
+
+.dotted-line-box {
+    width: 100px;
+    height: 180px;
+    border-left: 2px var(--primary-accent) dashed;
+
+    float: left;
+    position: relative;
+    bottom: 79px;
+    left: 5px;
+
+    pointer-events: none;
+}
+
+.smaller-text {
+    font-size: 14px;
+}
+
+.intro-text {
+    margin-top: 20px;
+    margin-bottom: 32px;
+}
+
+.miku-peek {
+    float: right;
+    position: relative;
+    right: -30px;
+    bottom: 56px;
+}
+
+.miku-headphones {
+    float: right;
+    position: relative;
+    right: -22px;
+    bottom: 36px;
+    transform: rotateY(180deg);
+    z-index: 10;
+}
+
+.miku-maxw {
+    max-width: 120px;
+}
+
+.daily-song-panel {
+    max-height: 130px;
+}
+
+.tune {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    text-decoration: none;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 24px;
+}
+
+.tune span {
+    color: white;
+    text-decoration: none !important;
+}
+
+.tune img {
+    border-radius: 6px;
+}
+
+.tune .tune-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 14px;
+    letter-spacing: -2%;
+}
+
+.tune .tune-artist {
+    color: #c3c3c3;
+    font-size: 12px;
+}
+
+.bp {
+    display: inline-block;
+    transform: scale(1.6,1);
+    margin-right: 2px;
+    color: #6777D8;
+    z-index: 10;
+    position: relative;
+}
+
+.panel-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 36px;
+    justify-content: center;
+}
+
+.panel-wrapper p {
+    color: #c3c3c3;
+    letter-spacing: -0.5px;
+}
+
+.panel {
+    background-color: var(--panel-color);
+    width: 200px;
+    padding: 24px;
+}
+
+.sidebar-header {
+    color: var(--primary-accent-lighter);
+    font-size: 18px;
+}
+
+.left-sidebar,
+.right-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.links-left-panel {
+    max-height: 200px;
+}
+
+.left-sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 16px;
+
+    font-size: 18px;
+}
+
+.left-sidebar a {
+    color: #ececec;
+}
+
+.right-sidebar {
+    max-height: 360px;
+}
+
+.right-sidebar p {
+    margin-top: 16px;
+}
+
+.center-panel-wrapper {
+    padding: 20px 24px;
+    background: var(--panel-color);
+}
+
+.center-panel {
+    background-color: var(--panel-color);
+    border: 2px var(--primary-accent) dashed;
+    box-sizing: border-box;
+
+    padding: 32px;
+
+    height: 75vh;
+    max-width: 600px;
+}
+
+.center-panel h1 {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.center-panel h2 {
+    font-weight: 600;
+    font-size: 20px;
+    color: #d8dae1;
+}
+
+.accent-highlight {
+    color: #844D9A;
+}
+
+.badges-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+a {
+    cursor: pointer;
+    transition: color 0.08s ease-out;
+    color: var(--primary-accent-lighter);
+
+    text-decoration: none !important;
+}
+
+a span {
+    cursor: pointer;
+    text-decoration: none !important;
+}
+
+a:hover {
+    color: var(--primary-accent-extralight);
+}
+
+hr {
+  border: none;
+  height: 4px;
+  background-image: radial-gradient(circle, #6c63d4 1.5px, transparent 1.5px);
+  background-size: 14px 4px;
+  background-repeat: repeat-x;
+  background-position: center;
+}
+
+.wavy-hr {
+  overflow: hidden;
+  white-space: nowrap;
+  color: #6c63d4;
+  font-size: 14px;
+  line-height: 1;
+  user-select: none;
+  margin-bottom: 20px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+hr::before {
+    content: "---";
+}
+
+hr {
+    margin: auto;
+    border: none;
+    outline: none;
+}
+
+h1:not(:first-child),
+h2:not(:first-child),
+h3:not(:first-child),
+h4:not(:first-child),
+h5:not(:first-child) {
+    padding-top: 30px;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+code {
+    font-family:
+        ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas,
+        "DejaVu Sans Mono", monospace;
+}
+
+:not(pre) > code {
+    padding: 2px 4px;
+}
+
+pre:has(code) {
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.1);
+
+    padding: 12px 24px;
+    color: black;
+    font-size: 1.2em;
+    overflow-x: scroll;
+}
+
+.title a {
+    color: var(--secondary-accent-extralight);
+    font-weight: 500;
+}
+
+.title a:hover {
+    color: var(--secondary-accent-lighter);
+}
+
+article {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+table {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-collapse: collapse;
+    overflow: hidden;
+}
+
+th,
+td {
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 5px;
+}
+.creation-date {
+    padding: 1px 6px;
+    color: #8e8e8eee;
+}
+
+.tag::before {
+    content: "#";
+    opacity: 0.6;
+    margin-right: 5px;
+}

@@ -1,0 +1,45 @@
+---
+id: 6TfytgS4alM
+title: optimizing battery life on linux
+description: Trying to squeeze as many hours as I can out of my poor ThinkPad
+author: Darius 
+visibility: public
+created: 2026-05-20T10:52:18+00:00
+---
+
+**UPDATE (20th May 2026):** This approach works quite well and has significantly improved my battery life to around 6 hours depending on usage. Unfortunately, it also comes with the tradeoff that more heavy apps (anything that's not the terminal or a simple text editor), especially Electron apps can get quite sluggish at times. I might need to tweak the settings a bit more to ensure the experience is still smooth while maintaining similar battery life.
+
+For university, I usually switch between an Apple Silicon MacBook and a ThinkPad T480s (it runs Arch, btw). The MacBook is my usual choice for long days, because its battery life is just unbeatable (~6-8 hours depending on the type of usage). Unfortunately, even for short days with 1-2 lectures, my beloved ThinkPad was struggling to get through them, only lasting at most 3 hours.
+
+Because I want to use my ThinkPad more, especially since I daily-drive a similar setup (Niri + Quickshell) on my Desktop and the keybinds are part of my muscle memory now, I tried to look into optimizing the battery life.
+
+## Tools to optimize battery life on Linux
+
+To research the available tools, I used two primary sources: Reddit and the Arch Wiki. Both gave me various options on how to optimize battery life, which I was able to narrow down to a few options to consider:
+
+- To examine your battery usage and run some basic optimizations, you can use [Powertop]().
+- A tool which easily allows various tweaks regarding power profiles, limiting battery charge and much more is [TLP](https://wiki.archlinux.org/title/TLP). It implements Powertop suggestions as its default, so Powertop will only be useful if you want to make further manual tweaks.
+- For ThinkPads specifically, there is [throttled](), which allows you to apply more advanced tweaks such as undervolting to prevent thermal throttling.
+
+While browsing Reddit, I have also found [a Medium article](https://amanusk.medium.com/an-extensive-guide-to-optimizing-a-linux-laptop-for-battery-life-and-performance-27a7d853856c) outlining some more advanced techniques to tweak your battery life (and it also includes some explanations of TLP settings).
+
+## My choices
+
+I wanted to keep it very simple, so I just went with TLP and TLP-UI to quickly make tweaks. These are the main settings that will hopefully help with my battery life:
+
+- Set power saving profile as default
+- Disable WOL (Wake on LAN). This is a default setting, but needs the `ethtool` package to be installed on Arch.
+- Set CPU scaling governor to power save
+- Set the maximum CPU performance to 75% on battery
+- Disabled "turbo boost" and dynamic boost on battery
+- For battery health purposes, limit battery charge to 80%
+
+Other than that, I just went with the defaults of TLP since they already seem to be configured quite well.
+
+## Further things to try
+
+I am hoping that this setup will help with my battery life and allow me to use my ThinkPad more often at uni. If it still doesn't help enough, I have two things I want to try to further improve battery life and CPU throttling.
+
+Firstly, I would attempt to use throttled to undervolt the CPU. I didn't go for it yet because it seemed a bit more risky and it needs a bit of tweaking to adjust parameters for a stable config.
+
+Secondly, since the ThinkPad is a bit old, repasting the CPU or swapping the fan/heatsink might help a bit with overheating and very loud fan noises which I've been encountering in some cases. This is not related directly to battery life but would also improve my experience significantly.
