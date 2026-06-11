@@ -18,10 +18,10 @@
 	},
 	"custom": {
 		"song_of_the_day": {
-			"album_art_url": "https://resources.tidal.com/images/fd5857e9/4b41/498b/bc8f/3aa9d4742c03/1280x1280.jpg",
-			"song_url": "https://tidal.com/track/276059876",
-			"song_title": "Simon Dominic",
-			"song_artist": "Simon Dominic"
+			"album_art_url": "https://resources.tidal.com/images/75f9830c/65c6/404c/9cb2/cfa9cb248f3e/1280x1280.jpg",
+			"song_url": "https://tidal.com/track/196137762",
+			"song_title": "Ms.808",
+			"song_artist": "VIANN x KHUNDI PANDA"
 		}
 	},
 	"callbacks": {
@@ -31,9 +31,9 @@
 		"on_modify": null
 	},
 	"hashes": {
-		"lGHrHQz_7Fk": "aAUtXZdaIVc",
-		"0dSzwLyxXxg": "PcG2Lpsv8b4",
-		"6TfytgS4alM": "kKwW7s09RG4",
-		"X1tG4eLPTQw": "TeFuvhiezuA"
+		"lGHrHQz_7Fk": "tARFSakL_CY",
+		"0dSzwLyxXxg": "szQ4fcT1c5o",
+		"6TfytgS4alM": "Em7aKnvWvZw",
+		"X1tG4eLPTQw": "CAW09fvAZLw"
 	}
 }
