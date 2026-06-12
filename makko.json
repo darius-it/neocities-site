@@ -18,10 +18,10 @@
 	},
 	"custom": {
 		"song_of_the_day": {
-			"album_art_url": "https://resources.tidal.com/images/75f9830c/65c6/404c/9cb2/cfa9cb248f3e/1280x1280.jpg",
-			"song_url": "https://tidal.com/track/196137762",
-			"song_title": "Ms.808",
-			"song_artist": "VIANN x KHUNDI PANDA"
+			"album_art_url": "https://resources.tidal.com/images/24d6aa88/f238/41fe/b18e/5c6e29d768cd/1280x1280.jpg",
+			"song_url": "https://tidal.com/track/513825797",
+			"song_title": "Pulse",
+			"song_artist": "Lockerz"
 		}
 	},
 	"callbacks": {
@@ -31,9 +31,9 @@
 		"on_modify": null
 	},
 	"hashes": {
-		"lGHrHQz_7Fk": "tARFSakL_CY",
-		"0dSzwLyxXxg": "szQ4fcT1c5o",
-		"6TfytgS4alM": "Em7aKnvWvZw",
-		"X1tG4eLPTQw": "CAW09fvAZLw"
+		"lGHrHQz_7Fk": "Nz7b_V6_Mwg",
+		"0dSzwLyxXxg": "0i2Br1MWJkE",
+		"6TfytgS4alM": "XQ2Vl7KWV48",
+		"X1tG4eLPTQw": "Jg4UI0SN9B0"
 	}
 }
