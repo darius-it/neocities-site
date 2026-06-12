@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>darius&apos; notes</title>
   <link href="https://n.darius-it.me"/>
-  <updated>2026-06-12T15:07:19+00:00</updated>
+  <updated>2026-06-12T18:14:26+00:00</updated>
   <id>https://n.darius-it.me</id>
   <generator uri="https://makko.starlightnet.work" version="3.0.0">Makko</generator>
   <entry>
@@ -10,7 +10,7 @@
     <link href="https://n.darius-it.me/new-site.html"/>
     <id>https://n.darius-it.me/new-site.html</id>
     <published>2026-06-09T21:20:06+00:00</published>
-    <updated>1970-01-01T00:00:00+00:00</updated>
+    <updated>2026-06-12T18:14:26+00:00</updated>
     <author><name>Darius</name></author>
     <summary>it&apos;s time for yet another website redesign!</summary>
   </entry>
@@ -19,7 +19,7 @@
     <link href="https://n.darius-it.me/linux-battery-life.html"/>
     <id>https://n.darius-it.me/linux-battery-life.html</id>
     <published>2026-05-20T10:52:18+00:00</published>
-    <updated>1970-01-01T00:00:00+00:00</updated>
+    <updated>2026-06-12T18:14:26+00:00</updated>
     <author><name>Darius</name></author>
     <summary>Trying to squeeze as many hours as I can out of my poor ThinkPad</summary>
   </entry>
@@ -28,7 +28,7 @@
     <link href="https://n.darius-it.me/multiple-git-identities.html"/>
     <id>https://n.darius-it.me/multiple-git-identities.html</id>
     <published>2026-04-20T11:29:01+00:00</published>
-    <updated>1970-01-01T00:00:00+00:00</updated>
+    <updated>2026-06-12T18:14:26+00:00</updated>
     <author><name>Darius</name></author>
     <summary>dealing with multiple identities for work/personal accounts</summary>
   </entry>
@@ -37,7 +37,7 @@
     <link href="https://n.darius-it.me/matugen-palette-generation.html"/>
     <id>https://n.darius-it.me/matugen-palette-generation.html</id>
     <published>2026-03-27T11:31:30+00:00</published>
-    <updated>1970-01-01T00:00:00+00:00</updated>
+    <updated>2026-06-12T18:14:26+00:00</updated>
     <author><name>Darius</name></author>
     <summary>Automatically generating color palettes from wallpapers using matugen + awww</summary>
   </entry>
