@@ -18,10 +18,10 @@
 	},
 	"custom": {
 		"song_of_the_day": {
-			"album_art_url": "https://resources.tidal.com/images/24d6aa88/f238/41fe/b18e/5c6e29d768cd/1280x1280.jpg",
-			"song_url": "https://tidal.com/track/513825797",
-			"song_title": "Pulse",
-			"song_artist": "Lockerz"
+			"album_art_url": "https://resources.tidal.com/images/ed45eac1/fc13/4d62/b039/f2441004a4e7/1280x1280.jpg",
+			"song_url": "https://tidal.com/track/522558493",
+			"song_title": "1 to 10",
+			"song_artist": "Simon Dominic"
 		}
 	},
 	"callbacks": {
@@ -31,9 +31,9 @@
 		"on_modify": null
 	},
 	"hashes": {
-		"lGHrHQz_7Fk": "Nz7b_V6_Mwg",
-		"0dSzwLyxXxg": "0i2Br1MWJkE",
-		"6TfytgS4alM": "XQ2Vl7KWV48",
-		"X1tG4eLPTQw": "Jg4UI0SN9B0"
+		"lGHrHQz_7Fk": "RcOKiqvSoAk",
+		"0dSzwLyxXxg": "d-NIDg4kTDw",
+		"6TfytgS4alM": "eE_0eGI7Ues",
+		"X1tG4eLPTQw": "amL76CnYmUY"
 	}
 }
