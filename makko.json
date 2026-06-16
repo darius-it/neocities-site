@@ -2,7 +2,7 @@
 	"$schema": "https://makko.starlightnet.work/schema.json",
 	"title": "darius' notes",
 	"description": "Random notes about various technical and non-technical topics.",
-	"url": "https://n.darius-it.me",
+	"url": "https://dar1us.neocities.org",
 	"paths": {
 		"symlinks_enabled": false,
 		"cleanup_mode": "none",
@@ -31,9 +31,9 @@
 		"on_modify": null
 	},
 	"hashes": {
-		"lGHrHQz_7Fk": "RcOKiqvSoAk",
-		"0dSzwLyxXxg": "d-NIDg4kTDw",
-		"6TfytgS4alM": "eE_0eGI7Ues",
-		"X1tG4eLPTQw": "amL76CnYmUY"
+		"lGHrHQz_7Fk": "1H_dJabEmwo",
+		"0dSzwLyxXxg": "W5yGlSW5qIs",
+		"6TfytgS4alM": "WgbH3t6CNVE",
+		"X1tG4eLPTQw": "Ka-Qe10j68g"
 	}
 }
