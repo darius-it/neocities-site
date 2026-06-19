@@ -18,10 +18,10 @@
 	},
 	"custom": {
 		"song_of_the_day": {
-			"album_art_url": "https://resources.tidal.com/images/cd2cf363/4e6e/426b/9f30/1133a3cae737/1280x1280.jpg",
-			"song_url": "https://tidal.com/track/532581071",
-			"song_title": "Too plain",
-			"song_artist": "Seemi"
+			"album_art_url": "https://resources.tidal.com/images/796831de/4f81/4d0f/9b9d/8ef92cabe9b6/1280x1280.jpg",
+			"song_url": "https://tidal.com/track/312565037",
+			"song_title": "Magnetic Force",
+			"song_artist": "Kangziwon"
 		}
 	},
 	"callbacks": {
@@ -31,9 +31,9 @@
 		"on_modify": null
 	},
 	"hashes": {
-		"lGHrHQz_7Fk": "rIU70e0r0Xc",
-		"0dSzwLyxXxg": "13-TAND2Ee0",
-		"6TfytgS4alM": "schlMhOdYvs",
-		"X1tG4eLPTQw": "Gv24hBIxGOU"
+		"lGHrHQz_7Fk": "SdG_esZwtAU",
+		"0dSzwLyxXxg": "KofzOQUwMpI",
+		"6TfytgS4alM": "IvgNVNd3Ack",
+		"X1tG4eLPTQw": "7doQjpc3r1s"
 	}
 }
