@@ -2,7 +2,7 @@
 	"$schema": "https://makko.starlightnet.work/schema.json",
 	"title": "darius' notes",
 	"description": "Random notes about various technical and non-technical topics.",
-	"url": "https://n.darius-it.me",
+	"url": "https://dar1us.neocities.org",
 	"paths": {
 		"symlinks_enabled": false,
 		"cleanup_mode": "none",
@@ -18,10 +18,10 @@
 	},
 	"custom": {
 		"song_of_the_day": {
-			"album_art_url": "https://resources.tidal.com/images/24d6aa88/f238/41fe/b18e/5c6e29d768cd/1280x1280.jpg",
-			"song_url": "https://tidal.com/track/513825797",
-			"song_title": "Pulse",
-			"song_artist": "Lockerz"
+			"album_art_url": "https://resources.tidal.com/images/daede94a/51ba/4b1d/8a43/833fa075d97d/1280x1280.jpg",
+			"song_url": "https://tidal.com/track/530635044",
+			"song_title": "Wee-woo",
+			"song_artist": "Purynn"
 		}
 	},
 	"callbacks": {
@@ -31,10 +31,10 @@
 		"on_modify": null
 	},
 	"hashes": {
-		"lGHrHQz_7Fk": "Nz7b_V6_Mwg",
-		"0dSzwLyxXxg": "0i2Br1MWJkE",
-		"6TfytgS4alM": "XQ2Vl7KWV48",
-		"IH0Cuw7d0nU": "TDiNv_OJT6w",
-		"X1tG4eLPTQw": "Jg4UI0SN9B0"
+		"lGHrHQz_7Fk": "RtFZZ34kaJ4",
+		"0dSzwLyxXxg": "gZrtTIjsefE",
+		"6TfytgS4alM": "3cSv5OdBuKQ",
+		"IH0Cuw7d0nU": "PRsWblRjDZk",
+		"X1tG4eLPTQw": "K5QOLYYlryU"
 	}
 }

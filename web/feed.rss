@@ -2,46 +2,46 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
       <title>darius&apos; notes</title>
-      <link>https://n.darius-it.me</link>
+      <link>https://dar1us.neocities.org</link>
       <description>Random notes about various technical and non-technical topics.</description>
       <generator>Makko v3.0.0</generator>
-      <lastBuildDate>Fri, 19 Jun 2026 14:33:17 GMT</lastBuildDate>
+      <lastBuildDate>Fri, 19 Jun 2026 14:39:54 GMT</lastBuildDate>
       <item>
           <title>sponsoring oss projects</title>
-          <link>https://n.darius-it.me/sponsoring-oss.html</link>
-          <guid isPermaLink="true">https://n.darius-it.me/sponsoring-oss.html</guid>
-          <pubDate>Fri, 19 Jun 2026 14:33:17 GMT</pubDate>
+          <link>https://dar1us.neocities.org/sponsoring-oss.html</link>
+          <guid isPermaLink="true">https://dar1us.neocities.org/sponsoring-oss.html</guid>
+          <pubDate>Fri, 19 Jun 2026 13:55:36 GMT</pubDate>
           <dc:creator>Darius</dc:creator>
           <description>How I am going about supporting open source</description>
       </item>
       <item>
           <title>new site (once again)</title>
-          <link>https://n.darius-it.me/new-site.html</link>
-          <guid isPermaLink="true">https://n.darius-it.me/new-site.html</guid>
+          <link>https://dar1us.neocities.org/new-site.html</link>
+          <guid isPermaLink="true">https://dar1us.neocities.org/new-site.html</guid>
           <pubDate>Tue, 9 Jun 2026 21:20:06 GMT</pubDate>
           <dc:creator>Darius</dc:creator>
           <description>it&apos;s time for yet another website redesign!</description>
       </item>
       <item>
           <title>optimizing battery life on linux</title>
-          <link>https://n.darius-it.me/linux-battery-life.html</link>
-          <guid isPermaLink="true">https://n.darius-it.me/linux-battery-life.html</guid>
+          <link>https://dar1us.neocities.org/linux-battery-life.html</link>
+          <guid isPermaLink="true">https://dar1us.neocities.org/linux-battery-life.html</guid>
           <pubDate>Wed, 20 May 2026 10:52:18 GMT</pubDate>
           <dc:creator>Darius</dc:creator>
           <description>Trying to squeeze as many hours as I can out of my poor ThinkPad</description>
       </item>
       <item>
           <title>managing multiple git identities</title>
-          <link>https://n.darius-it.me/multiple-git-identities.html</link>
-          <guid isPermaLink="true">https://n.darius-it.me/multiple-git-identities.html</guid>
+          <link>https://dar1us.neocities.org/multiple-git-identities.html</link>
+          <guid isPermaLink="true">https://dar1us.neocities.org/multiple-git-identities.html</guid>
           <pubDate>Mon, 20 Apr 2026 11:29:01 GMT</pubDate>
           <dc:creator>Darius</dc:creator>
           <description>dealing with multiple identities for work/personal accounts</description>
       </item>
       <item>
           <title>generating color palettes with matugen</title>
-          <link>https://n.darius-it.me/matugen-palette-generation.html</link>
-          <guid isPermaLink="true">https://n.darius-it.me/matugen-palette-generation.html</guid>
+          <link>https://dar1us.neocities.org/matugen-palette-generation.html</link>
+          <guid isPermaLink="true">https://dar1us.neocities.org/matugen-palette-generation.html</guid>
           <pubDate>Fri, 27 Mar 2026 11:31:30 GMT</pubDate>
           <dc:creator>Darius</dc:creator>
           <description>Automatically generating color palettes from wallpapers using matugen + awww</description>
