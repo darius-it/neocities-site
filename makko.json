@@ -2,7 +2,7 @@
 	"$schema": "https://makko.starlightnet.work/schema.json",
 	"title": "darius' notes",
 	"description": "Random notes about various technical and non-technical topics.",
-	"url": "https://dar1us.neocities.org",
+	"url": "https://n.darius-it.me",
 	"paths": {
 		"symlinks_enabled": false,
 		"cleanup_mode": "none",
@@ -18,10 +18,10 @@
 	},
 	"custom": {
 		"song_of_the_day": {
-			"album_art_url": "https://resources.tidal.com/images/796831de/4f81/4d0f/9b9d/8ef92cabe9b6/1280x1280.jpg",
-			"song_url": "https://tidal.com/track/312565037",
-			"song_title": "Magnetic Force",
-			"song_artist": "Kangziwon"
+			"album_art_url": "https://resources.tidal.com/images/24d6aa88/f238/41fe/b18e/5c6e29d768cd/1280x1280.jpg",
+			"song_url": "https://tidal.com/track/513825797",
+			"song_title": "Pulse",
+			"song_artist": "Lockerz"
 		}
 	},
 	"callbacks": {
@@ -31,9 +31,10 @@
 		"on_modify": null
 	},
 	"hashes": {
-		"lGHrHQz_7Fk": "SdG_esZwtAU",
-		"0dSzwLyxXxg": "KofzOQUwMpI",
-		"6TfytgS4alM": "IvgNVNd3Ack",
-		"X1tG4eLPTQw": "7doQjpc3r1s"
+		"lGHrHQz_7Fk": "Nz7b_V6_Mwg",
+		"0dSzwLyxXxg": "0i2Br1MWJkE",
+		"6TfytgS4alM": "XQ2Vl7KWV48",
+		"IH0Cuw7d0nU": "TDiNv_OJT6w",
+		"X1tG4eLPTQw": "Jg4UI0SN9B0"
 	}
 }
