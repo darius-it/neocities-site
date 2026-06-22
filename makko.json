@@ -18,10 +18,10 @@
 	},
 	"custom": {
 		"song_of_the_day": {
-			"album_art_url": "https://resources.tidal.com/images/daede94a/51ba/4b1d/8a43/833fa075d97d/1280x1280.jpg",
-			"song_url": "https://tidal.com/track/530635044",
-			"song_title": "Wee-woo",
-			"song_artist": "Purynn"
+			"album_art_url": "https://resources.tidal.com/images/10cf2746/070d/4172/b065/91ac7a753b4a/1280x1280.jpg",
+			"song_url": "https://tidal.com/track/470978421",
+			"song_title": "Wrong Places",
+			"song_artist": "Lauren Creviston"
 		}
 	},
 	"callbacks": {
@@ -31,10 +31,10 @@
 		"on_modify": null
 	},
 	"hashes": {
-		"lGHrHQz_7Fk": "RtFZZ34kaJ4",
-		"0dSzwLyxXxg": "gZrtTIjsefE",
-		"6TfytgS4alM": "3cSv5OdBuKQ",
-		"IH0Cuw7d0nU": "PRsWblRjDZk",
-		"X1tG4eLPTQw": "K5QOLYYlryU"
+		"lGHrHQz_7Fk": "GFbBYBWPMF0",
+		"0dSzwLyxXxg": "qxORA4yyab0",
+		"6TfytgS4alM": "BqtgVvU0c_k",
+		"IH0Cuw7d0nU": "uPEH-bU7Jes",
+		"X1tG4eLPTQw": "dDBujCRfJU8"
 	}
 }
